@@ -5,6 +5,10 @@
 # Written by Bruno JJE
 # Copyright (c) 2015 Bruno JJE
 #
+# Modified for 
+# SublimeLinter defaults/selector usage
+# (c) 2019 David Goncalves
+#
 # License: MIT
 #
 
@@ -16,12 +20,15 @@ from SublimeLinter.lint import Linter
 class Ghdl(Linter):
 
     """Provides an interface to ghdl."""
-
-    syntax = 'vhdl'
     cmd = 'ghdl -a @'
     version_re = r'GHDL (?P<version>\d+\.\d+)'
     version_requirement = '>= 0.31'
     tempfile_suffix = 'vhd'
+    defaults = {
+    'selector': 'source.vhdl',
+        '--errors=,': '',
+        '--warnings=,': '',
+        '--ignore=,': ''
 
     # Here is a sample ghdl error output:
     # ----8<------------
