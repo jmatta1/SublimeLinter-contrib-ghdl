@@ -26,9 +26,7 @@ class Ghdl(Linter):
     tempfile_suffix = 'vhd'
     defaults = {
     'selector': 'source.vhdl',
-        '--errors=,': '',
-        '--warnings=,': '',
-        '--ignore=,': ''
+    }
 
     # Here is a sample ghdl error output:
     # ----8<------------
