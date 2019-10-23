@@ -1,6 +1,6 @@
 #
 # linter.py
-# Linter for SublimeLinter3, a code checking framework for Sublime Text 3
+# Linter for SublimeLinter, a code checking framework for Sublime Text
 #
 # Written by Bruno JJE
 # Copyright (c) 2015 Bruno JJE
@@ -20,10 +20,8 @@ from SublimeLinter.lint import Linter
 class Ghdl(Linter):
 
     """Provides an interface to ghdl."""
+    name = 'ghdl'
     cmd = 'ghdl -a @'
-    version_re = r'GHDL (?P<version>\d+\.\d+)'
-    version_requirement = '>= 0.31'
-    tempfile_suffix = 'vhd'
     defaults = {
     'selector': 'source.vhdl',
     }
