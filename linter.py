@@ -20,7 +20,7 @@ from SublimeLinter.lint import Linter, util
 class Ghdl(Linter):
 
     """Provides an interface to ghdl."""
-    #name = 'ghdl'
+    name = 'ghdl'
     cmd = 'ghdl -a ${file}'
     error_stream = util.STREAM_BOTH # errors are on stderr
     on_stderr = None # handle stderr via split_match
@@ -36,17 +36,3 @@ class Ghdl(Linter):
     regex = (
         r"^(?P<path>.*):(?P<line>[0-9]+):(?P<col>[0-9]+)(?P<error>): (?P<message>.*)"
     )
-
-    def split_match(self, match):
-        """
-        Extract and return values from match.
-        We override this method to prefix the error message with the
-        linter name.
-        """
-
-        match, line, col, error, warning, message, near = super().split_match(match)
-
-        if match:
-            message = '[ghdl] ' + message
-
-        return match, line, col, error, warning, message, near
