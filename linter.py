@@ -20,6 +20,7 @@ from SublimeLinter.lint import Linter
 class Ghdl(Linter):
 
     """Provides an interface to ghdl."""
+    syntax = 'vhdl'
     name = 'ghdl'
     cmd = 'ghdl -a @'
     defaults = {
