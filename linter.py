@@ -14,7 +14,7 @@
 
 """This module exports the Ghdl plugin class."""
 
-from SublimeLinter.lint import Linter
+from SublimeLinter.lint import Linter, util
 
 
 class Ghdl(Linter):
@@ -22,10 +22,12 @@ class Ghdl(Linter):
     """Provides an interface to ghdl."""
     name = 'ghdl'
     cmd = 'ghdl -a ${file}'
+    error_stream = util.STREAM_BOTH # errors are on stderr
+    on_stderr = None # handle stderr via split_match
     defaults = {
     'selector': 'source.vhdl',
     }
-    error_stream = SublimeLinter.lint.STREAM_STDERR
+
     # Here is a sample ghdl error output:
     # ----8<------------
     # filtre8.vhd:35:3: object class keyword such as 'variable' is expected
