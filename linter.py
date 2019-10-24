@@ -20,7 +20,7 @@ from SublimeLinter.lint import Linter, util
 class Ghdl(Linter):
 
     """Provides an interface to ghdl."""
-    name = 'ghdl'
+    name = '[ghdl]'
     cmd = 'ghdl -a ${file}'
     error_stream = util.STREAM_BOTH # errors are on stderr
     on_stderr = None # handle stderr via split_match
