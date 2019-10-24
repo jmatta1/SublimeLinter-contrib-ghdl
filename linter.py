@@ -36,21 +36,3 @@ class Ghdl(Linter):
     regex = (
         r"^(?P<path>.*):(?P<line>[0-9]+):(?P<col>[0-9]+)(?P<error>:)(?P<message>.*)"
     )
-
-    """
-    def split_match(self, match):
-        """
-        Extract and return values from match.
-
-        We override this method to prefix the error message with the
-        linter name.
-
-        """
-
-        match, line, col, error, warning, message, near = super().split_match(match)
-
-        if match:
-            message = '[ghdl] ' + message
-
-        return match, line, col, error, warning, message, near
-        """
