@@ -32,7 +32,8 @@ class Ghdl(Linter):
     # ----8<------------
 
     regex = (
-        r"^(?P<path>.*)(?P<error>:)(?P<line>[0-9]+):(?P<col>[0-9]+): (?P<message>.*)"
+        r"^(?P<path>.*)(?P<error>:)(?P<line>[0-9]+):(?P<col>[0-9]+)"
+        r": (?P<message>.*)"
     )
 
     def split_match(self, match):
