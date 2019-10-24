@@ -37,6 +37,7 @@ class Ghdl(Linter):
         r"^(?P<path>.*):(?P<line>[0-9]+):(?P<col>[0-9]+)(?P<error>:)(?P<message>.*)"
     )
 
+    """
     def split_match(self, match):
         """
         Extract and return values from match.
@@ -52,3 +53,4 @@ class Ghdl(Linter):
             message = '[ghdl] ' + message
 
         return match, line, col, error, warning, message, near
+        """
