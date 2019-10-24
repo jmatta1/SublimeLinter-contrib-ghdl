@@ -34,5 +34,5 @@ class Ghdl(Linter):
     # ----8<------------
 
     regex = (
-        r"^(?P<path>.*):(?P<line>[0-9]+):(?P<col>[0-9]+)(?P<error>:)(?P<message>.*)"
+        r"^(?P<path>.*):(?P<line>[0-9]+):(?P<col>[0-9]+)(?P<error>): (?P<message>.*)"
     )
