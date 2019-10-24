@@ -25,7 +25,7 @@ class Ghdl(Linter):
     defaults = {
     'selector': 'source.vhdl',
     }
-
+    error_stream = SublimeLinter.lint.STREAM_STDERR
     # Here is a sample ghdl error output:
     # ----8<------------
     # filtre8.vhd:35:3: object class keyword such as 'variable' is expected
