@@ -21,7 +21,7 @@ class Ghdl(Linter):
 
     """Provides an interface to ghdl."""
     name = 'ghdl'
-    cmd = 'ghdl -a @'
+    cmd = 'ghdl -a ${file}'
     defaults = {
     'selector': 'source.vhdl',
     }
