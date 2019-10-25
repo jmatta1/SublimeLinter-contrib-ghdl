@@ -16,7 +16,6 @@
 
 from SublimeLinter.lint import Linter, util
 
-
 class Ghdl(Linter):
 
     """Provides an interface to ghdl."""
