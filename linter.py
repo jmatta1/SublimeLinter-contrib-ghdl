@@ -5,7 +5,7 @@
 # Written by Bruno JJE
 # Copyright (c) 2015 Bruno JJE
 #
-# Modified for 
+# Modified for
 # SublimeLinter defaults/selector usage
 # (c) 2019 David Goncalves
 #
@@ -20,12 +20,13 @@ from SublimeLinter.lint import Linter, util
 class Ghdl(Linter):
 
     """Provides an interface to ghdl."""
+
     name = 'ghdl'
     cmd = 'ghdl -a ${file}'
-    error_stream = util.STREAM_BOTH # errors are on stderr
-    on_stderr = None # handle stderr via split_match
+    error_stream = util.STREAM_BOTH  # errors are on stderr
+    on_stderr = None  # handle stderr via split_match
     defaults = {
-    'selector': 'source.vhdl',
+        'selector': 'source.vhdl',
     }
 
     # Here is a sample ghdl error output:
