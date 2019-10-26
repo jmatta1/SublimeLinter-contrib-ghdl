@@ -7,4 +7,4 @@ This linter plugin for SublimeLinter provides an interface to ghdl.
 Before this plugin will activate, you *must*
 follow the installation instructions here:
 
-https://github.com/BrunoJJE/SublimeLinter-contrib-ghdl
+https://github.com/ringof/SublimeLinter-contrib-ghdl
