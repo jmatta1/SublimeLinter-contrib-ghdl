@@ -6,7 +6,7 @@ SublimeLinter-contrib-ghdl
 This linter plugin for [SublimeLinter][docs] provides an interface to [ghdl](http://sourceforge.net/p/ghdl-updates/wiki/Home/). It will be used with files that have the “VHDL” syntax.
 
 ## Installation
-SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
+SublimeLinter 4 must be installed in order to use this plugin. If SublimeLinter 4 is not installed, please follow the instructions [here][installation].
 
 ### Linter installation
 Before using this plugin, you must ensure that `ghdl` is installed on your system. To install `ghdl`, follow the instruction given on [this](http://sourceforge.net/p/ghdl-updates/wiki/Installing%20ghdl/) page.
