@@ -13,13 +13,12 @@
 #
 
 """This module exports the Ghdl plugin class."""
-
 from SublimeLinter.lint import Linter, util
+
 
 class Ghdl(Linter):
 
     """Provides an interface to ghdl."""
-
     name = 'ghdl'
     cmd = 'ghdl -a ${file}'
     error_stream = util.STREAM_BOTH  # errors are on stderr
@@ -34,5 +33,6 @@ class Ghdl(Linter):
     # ----8<------------
 
     regex = (
-        r"^(?P<path>.*):(?P<line>[0-9]+):(?P<col>[0-9]+)(?P<error>): (?P<message>.*)"
+        r"^(?P<path>.*):(?P<line>[0-9]+):(?P<col>[0-9]+)"
+        r"(?P<error>): (?P<message>.*)"
     )
