@@ -20,7 +20,7 @@ class Ghdl(Linter):
 
     """Provides an interface to ghdl."""
 
-    cmd = 'ghdl -a ${file}'
+    cmd = 'ghdl -a ${args} ${file}'
     error_stream = util.STREAM_BOTH
     on_stderr = None
     defaults = {
